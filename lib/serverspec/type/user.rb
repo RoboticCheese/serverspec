@@ -24,6 +24,10 @@ module Serverspec::Type
       @runner.check_user_has_login_shell(@name, shell)
     end
 
+    def has_login_item?(item)
+      @runner.check_user_has_login_item(@name, item)
+    end
+
     def has_authorized_key?(key)
       @runner.check_user_has_authorized_key(@name, key)
     end
